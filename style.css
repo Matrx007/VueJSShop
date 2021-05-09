@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.grow:hover {
+    transform: scale(1.048);
+}
+
+.grow:active {
+    transform: scale(1.024);
+}
+
+
+body {
+    background-image: url("https://cdn.glitch.com/ec3e5d31-5b3b-4a1d-b48e-3863c52227ee%2Fpattern.jpg?v=1607780180177");
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+
+
+.top-bar {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 64px;
+
+    background-color: #5e8eaa;
+    box-shadow: 0 0 32px #4448;
+
+    display: flex;
+    flex-direction: row;
+}
+    .top-bar a {
+        font-family: 'Rancho', sans-serif;
+        font-size: 32px;
+
+        color: #fffd;
+        line-height: 64px;
+        padding: 0 32px;
+    }
+    .top-bar a:hover {
+        color: #5e8eaa;
+        background-color: #fffd;
+    }
+    .top-bar .cross-section {
+        z-index: 100;
+        width: 496px;
+        height: 64px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgb(156, 175, 185);
+    }
+        .top-bar .cross-section .brand-name {
+            font-family: 'Reenie Beanie', sans-serif;
+            font-size: 48px;
+            line-height: 64px;
+
+            color: #FFE4CC;
+
+            text-shadow: 0 0 16px #4442;
+
+            margin: 0;
+        }
+        .top-bar .cross-section .brand-logo {
+            width: 48px;
+            height: 48px;
+            padding: 8px;
+            object-fit: contain;
+
+            -webkit-filter: drop-shadow(0 0 24px #4442);
+            filter: drop-shadow(0 0 24px #4442);
+        }
+
+
+
+#shop {
+    width: 100%;
+    margin: 64px 0 0 0;
+
+    display: flex;
+    flex-direction: row;
+}
+
+#items {
+    margin-left: calc(400px + 48px * 2);
+    padding: 48px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    #items .sorting {
+        width: 100%;
+        height: 40px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 16px;
+    }
+        #items .sorting select {
+            width: fit-content;
+            height: 100%;
+
+            padding: 0 16px;
+
+            border: none;
+            background-color: #fff;
+            box-shadow: 0px 0px 8px #4442;
+
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        #items .sorting button {
+            width: 40px;
+            height: 40px;
+
+            padding: 0 16px;
+
+            border: none;
+            background-color: #fff;
+            box-shadow: 0px 0px 8px #4442;
+
+            font-family: 'Raleway', sans-serif;
+            font-size: 13px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        #items .sorting button:hover {
+            cursor: pointer;
+        }
+#items .item {
+    float: left;
+
+    width: 320px;
+    height: 512px;
+
+    background-color: white;
+    box-shadow: 0px 0px 40px 12px #4442;
+
+    margin: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    #items .item .header {
+        margin: 16px 0 0 0;
+        padding: 0 16px;
+    }
+        #items .item .header * {
+            width: 100%;
+            
+            font-family: 'Raleway', sans-serif;
+            font-size: 28px;
+            text-align: center;
+
+            margin: 0;
+
+            align-self: baseline;
+        }
+        #items .item .name {
+            font-family: 'Rancho', cursive;
+            font-weight: 100;
+            font-size: 32px;
+        }
+        #items .item .price {
+            font-family: 'Rancho', cursive;
+            font-size: 24px;
+        }
+
+
+    #items .item .thumbnail {
+        width: 100%;
+        height: 40%;
+        object-fit: contain;
+    }
+
+    .quantity-selection {
+        width: 128px;
+        height: fit-content;
+
+        margin: 0 auto;
+
+        padding: 12px 0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+        .quantity-selection .quantity,
+        .quantity-selection .decrement,
+        .quantity-selection .increment {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: 2px;
+
+            text-align: center;
+
+            line-height: 0;
+        }
+        .quantity-selection .quantity {
+            width: 30%;
+        }
+        .quantity-selection .quantity-button {
+            width: 32px;
+            height: 32px;
+
+            text-align: center;
+
+            transition: all 0.4s;
+            background-color: #fff;
+            
+            border-radius: 16px;
+        }
+        .quantity-selection .quantity-button:hover {
+            background-color: #bbb2;
+        }
+        .quantity-selection .quantity-button:active {
+            background-color: #bbb8;
+            transition: 0s;
+        }
+
+    .add {
+        width: 100%;
+        height: 72px;
+
+        background-color: rgb(44, 96, 100);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        .add p {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 24px;
+            letter-spacing: 2px;
+            
+            color: #fff;
+            
+            text-align: center;
+            text-transform: uppercase;
+
+            margin: 0;
+
+            width: 100%;
+        }
+        .add .total {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            letter-spacing: 2px;
+
+            text-align: center;
+
+            margin: 0;
+
+            width: 100%;
+        }
+        .add:hover {
+            background-color: rgb(74, 126, 129);
+        }
+        .add:active {
+            background-color: rgb(97, 149, 151);
+        }
+
+
+
+
+
+
+
+
+
+.side-panel {
+    position: fixed;
+    width: 400px;
+    height: 100vh;
+
+    top: 64px;
+    left: 0;
+
+    padding: 48px;
+
+    overflow-y: hidden;
+
+    background-color: #fff;
+    box-shadow: 0 0 64px #4443;
+}
+
+#cart {
+    background-color: #fff;
+
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    #cart .title {
+        width: 100%;
+
+        font-family: 'Raleway', sans-serif;
+        font-size: 28px;
+        letter-spacing: 2px;
+        line-height: 32px;
+
+        margin: 16px 0;
+
+        text-align: center;
+    }
+    #cart .total {
+        /* width: 100%; */
+
+        font-family: 'Robot', sans-serif;
+        font-weight: 100;
+        font-size: 18px;
+        letter-spacing: 1.5px;
+        line-height: 32px;
+
+
+        border-top: 1px solid #bbb4;
+        color: #333;
+
+        margin: 16px 0;
+        padding-top: 16px;
+        padding-left: 32px;
+
+        text-align: left;
+    }
+    #cart .list {
+        width: 100%;
+    }
+    #cart .list ul {
+            width: 100%;
+
+            padding: 0;
+            margin: 0;
+
+            list-style-type: none;
+        }
+            #cart .list .item {
+                height: 80px;
+
+                color: #333;
+                
+                background-color: white;
+            }
+                #cart .list .item .thumbnail {
+                    height: 64px;
+                    width: 64px;
+
+                    object-fit: contain;
+
+                    margin: 8px;
+
+                    float: left;
+                }
+                #cart .list .item .info {
+                    height: 100%;
+
+                    float: left;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                #cart .list .item .name {
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 24px;
+
+                    width: 240px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    margin: 0;
+                }
+                #cart .list .item .quantity-info p {
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 16px;
+
+                    margin: 0;
+
+                    float: left;
+                }
+                #cart .list .item:hover {
+                    box-shadow: 0 0 24px #bbb4;
+                    z-index: 10;
+                }
+                #cart .item .remove {
+                    width: 32px;
+                    height: 32px;
+
+                    transition: all 0.1s ease;
+                    opacity: 0;
+
+                    margin: calc((80px - 32px) / 2);
+
+                    float: right;
+                }
+                    #cart .item:hover .remove {
+                        opacity: 0.1;
+                    }
+                    #cart .item .remove svg {
+                        width: 32px;
+                        height: 32px;
+
+                        object-fit: cover;
+                    }
+                    #cart .item .remove:hover {
+                        opacity: 0.4;
+                    }
+
+
+
