@@ -112,6 +112,22 @@ body {
             -webkit-filter: drop-shadow(0 0 24px #4442);
             filter: drop-shadow(0 0 24px #4442);
         }
+    .top-bar input {
+        width: 256px;
+        height: 32px;
+
+        margin: 16px;
+        padding: 0 16px;
+
+        border: none;
+        background-color: #fff;
+        box-shadow: 0px 0px 8px #4442;
+
+        font-family: 'Raleway', sans-serif;
+        font-size: 13px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
 
 
 
@@ -124,6 +140,8 @@ body {
 }
 
 #items {
+    width: 100%;
+    
     margin-left: calc(400px + 48px * 2);
     padding: 48px;
     
@@ -175,21 +193,6 @@ body {
         }
         #items .sorting button:hover {
             cursor: pointer;
-        }
-        #items .sorting input {
-            width: 256px;
-            height: 40px;
-
-            padding: 0 16px;
-
-            border: none;
-            background-color: #fff;
-            box-shadow: 0px 0px 8px #4442;
-
-            font-family: 'Raleway', sans-serif;
-            font-size: 13px;
-            text-align: center;
-            letter-spacing: 1px;
         }
 #items .item {
     float: left;

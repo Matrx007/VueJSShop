@@ -15,11 +15,6 @@
 </head>
 <body style="margin: 0;">
     <div id="app">
-
-        <!-- <div id="info">
-            <h1 class="brand-name">Meme Department</h1>
-        </div> -->
-
         
         <div id="toggle-cart" v-on:click="toggleCart()" >
             <img src="https://img.icons8.com/material-rounded/24/000000/shopping-basket-2.png"/>
@@ -60,6 +55,8 @@
             <a class="noselect">Home</a>
             <a class="noselect">About</a>
             <a class="noselect">FAQ</a>
+            
+            <input type="text" v-model="search" placeholder="Search for products">
         </div>
 
         <div id="shop">
@@ -110,10 +107,6 @@
                     </button>
                 </div>
 
-                <div class="sorting">
-                    <input type="text" placeholder="Search for products">
-                </div>
-
                 <div class="item" v-for="(product, i) in sortedProducts">
                     <div class="header" :data-product-id="product.id">
                         <h1 class="name">{{ product.name }}</h1>
@@ -142,33 +135,6 @@
                 </div>
             </div>
         </div>
-        
-
-        <template id="cart-item-template">
-            <li class="item grow noselect">
-                <img class="thumbnail" src="https://images-na.ssl-images-amazon.com/images/I/71FrZw6nZaL._AC_SX679._SX._UX._SY._UY_.jpg">
-                <div class="info">
-                    <h1 class="name">Doge Backpack2</h1>
-                    <div class="quantity-info">
-                        <p class="quantity">10</p>
-                        <p>&nbsp;×&nbsp;</p>
-                        <p class="price">39.99 €</p>
-                    </div>
-                </div>
-
-                <div class="remove">
-                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="96px" height="96px">    <path d="M 10 2 L 9 3 L 4 3 L 4 5 L 7 5 L 17 5 L 20 5 L 20 3 L 15 3 L 14 2 L 10 2 z M 5 7 L 5 20 C 5 21.1 5.9 22 7 22 L 17 22 C 18.1 22 19 21.1 19 20 L 19 7 L 5 7 z"/></svg>
-                </div>
-            </li>
-        </template>
-
-
-
-        <!-- <script src="compiled.js"></script>
-        <script>
-            loadItemsFromHTML();
-            console.log("HTML elements loaded");
-        </script> -->
     </div>
 </body>
 <script src="/home/mx007/projects/VueJSShop/page.js"></script>

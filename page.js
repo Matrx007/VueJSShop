@@ -112,7 +112,8 @@ const app = Vue.createApp({
             cart: [],
             sorting: "Sort by name",
             reversed: false,
-            category: "All"
+            category: "All",
+            search: ""
         }
     },
     computed: {
@@ -136,10 +137,10 @@ const app = Vue.createApp({
                     return product.category == this.category;
                 });
             
-            // if(this.search != "")
-            //     displayProducts = displayProducts.filter((product) => {
-            //         return product.name.toLowerCase().contains(this.search.toLowerCase());
-            //     });
+            if(this.search != "")
+                displayProducts = displayProducts.filter((product) => {
+                    return product.name.toLowerCase().includes(this.search.toLowerCase());
+                });
 
             return displayProducts;
         },
